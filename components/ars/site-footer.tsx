@@ -73,7 +73,7 @@ export function SiteFooter() {
                   </a>
                 </li>
                 <li>
-                  <a href="https://wa.me/916202122112" className="flex items-center gap-3">
+                  <a href="https://wa.me/916202122112" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp 6202122112" className="flex items-center gap-3">
                     <MessageCircle className="h-3.5 w-3.5" aria-hidden="true" /> 6202122112
                   </a>
                 </li>

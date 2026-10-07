@@ -1,6 +1,7 @@
 import { Analytics } from '@vercel/analytics/next'
 import type { Metadata, Viewport } from 'next'
 import { Poppins, Figtree } from 'next/font/google'
+import { WhatsAppButton } from '@/components/ars/whatsapp-button'
 import './globals.css'
 
 const poppins = Poppins({
@@ -35,6 +36,7 @@ export default function RootLayout({
     <html lang="en" className={`${poppins.variable} ${figtree.variable} bg-background`}>
       <body className="font-sans antialiased">
         {children}
+        <WhatsAppButton />
         {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>
     </html>
