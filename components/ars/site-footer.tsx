@@ -1,17 +1,52 @@
 import Image from 'next/image'
+import Link from 'next/link'
 import { ChevronRight, Clock, MapPin, MessageCircle, Phone, ShipWheel as Steering, Store, UserRoundCog } from 'lucide-react'
 
 const ctas = [
-  { icon: UserRoundCog, title: 'Enquire Now', text: 'Get quick assistance from our team.' },
-  { icon: Steering, title: 'Book A Test Drive', text: 'Experience the difference yourself.' },
-  { icon: Store, title: 'Find A Store Near You', text: 'Visit our showrooms across India.' },
+  { icon: UserRoundCog, title: 'Enquire Now', text: 'Get quick assistance from our team.', href: '/contact#contact' },
+  { icon: Steering, title: 'Book A Test Drive', text: 'Experience the difference yourself.', href: '/contact#contact' },
+  { icon: Store, title: 'Find A Store Near You', text: 'Visit our showrooms across India.', href: '/contact' },
 ]
 
-const columns = [
-  { title: 'Quick Links', links: ['Home', 'About Us', 'Ventures', 'Careers', 'Blogs', 'Contact Us'] },
-  { title: 'Ventures', links: ['ARS Global Automotive', 'ARS MotoCorp', 'ARS Commercial Mobility'] },
-  { title: 'Useful Links', links: ['Privacy Policy', 'Terms of Service', 'Shipping Policy', 'Return Policy'] },
-  { title: 'Contact', links: ['Get in Touch', 'Careers', 'Locate Us'] },
+type FooterLink = { label: string; href?: string }
+
+const columns: { title: string; links: FooterLink[] }[] = [
+  {
+    title: 'Quick Links',
+    links: [
+      { label: 'Home', href: '/' },
+      { label: 'About Us', href: '/about' },
+      { label: 'Ventures', href: '/#business' },
+      { label: 'Careers', href: '/#careers' },
+      { label: 'Blogs', href: '/#blogs' },
+      { label: 'Contact Us', href: '/contact' },
+    ],
+  },
+  {
+    title: 'Ventures',
+    links: [
+      { label: 'ARS Global Automotive', href: '/#business' },
+      { label: 'ARS MotoCorp', href: '/#business' },
+      { label: 'ARS Commercial Mobility', href: '/commercial-mobility' },
+    ],
+  },
+  {
+    title: 'Useful Links',
+    links: [
+      { label: 'Privacy Policy' },
+      { label: 'Terms of Service' },
+      { label: 'Shipping Policy' },
+      { label: 'Return Policy' },
+    ],
+  },
+  {
+    title: 'Contact',
+    links: [
+      { label: 'Get in Touch', href: '/contact#contact' },
+      { label: 'Careers', href: '/#careers' },
+      { label: 'Locate Us', href: '/contact' },
+    ],
+  },
 ]
 
 const socials = [
@@ -36,15 +71,15 @@ export function SiteFooter() {
     <footer className="mt-3 bg-[#081733] font-alt text-white">
       <div className="border-b border-white/10 bg-[#0a1b3c]">
         <ul className="mx-auto flex max-w-[1240px] flex-col items-center justify-center gap-6 px-6 py-6 md:flex-row md:gap-0">
-          {ctas.map(({ icon: Icon, title, text }, i) => (
+          {ctas.map(({ icon: Icon, title, text, href }, i) => (
             <li key={title} className={i !== 0 ? 'md:border-l md:border-white/20 md:pl-8' : 'md:pr-8'}>
-              <a href="#contact" className="flex items-center gap-3 md:pr-8">
+              <Link href={href} className="flex items-center gap-3 md:pr-8">
                 <Icon className="h-8 w-8" strokeWidth={1.1} aria-hidden="true" />
                 <span>
                   <span className="block text-[13px] font-medium">{title}</span>
                   <span className="block text-[9px] text-white/75">{text}</span>
                 </span>
-              </a>
+              </Link>
             </li>
           ))}
         </ul>
@@ -107,13 +142,17 @@ export function SiteFooter() {
               <ColumnTitle>{col.title}</ColumnTitle>
               <ul className="mt-5 space-y-2.5">
                 {col.links.map((link) => (
-                  <li key={link}>
-                    <a href="#home" className="inline-flex items-center gap-1 text-[11px] text-white/90 hover:text-white">
-                      {link}
-                      {col.title === 'Quick Links' && link === 'Ventures' && (
-                        <ChevronRight className="h-3 w-3" aria-hidden="true" />
-                      )}
-                    </a>
+                  <li key={link.label}>
+                    {link.href ? (
+                      <Link href={link.href} className="inline-flex items-center gap-1 text-[11px] text-white/90 hover:text-white">
+                        {link.label}
+                        {col.title === 'Quick Links' && link.label === 'Ventures' && (
+                          <ChevronRight className="h-3 w-3" aria-hidden="true" />
+                        )}
+                      </Link>
+                    ) : (
+                      <span className="inline-flex items-center gap-1 text-[11px] text-white/60">{link.label}</span>
+                    )}
                   </li>
                 ))}
               </ul>

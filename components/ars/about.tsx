@@ -50,7 +50,7 @@ export function About() {
           </dl>
 
           <a
-            href="#why"
+            href="/about"
             className="mt-9 inline-flex items-center gap-2 rounded-sm border border-ink/10 bg-white px-4 py-2.5 pr-8 text-[11px] font-semibold text-ink shadow-sm transition-colors hover:bg-white/80"
           >
             Discover Our Story

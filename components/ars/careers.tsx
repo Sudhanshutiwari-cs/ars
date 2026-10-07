@@ -21,7 +21,7 @@ export function Careers() {
         <ul className="mt-4 grid gap-4 md:grid-cols-[1.62fr_1fr]">
           {cards.map((card) => (
             <li key={card.title}>
-              <a href="#contact" className="group relative block aspect-[4/3] overflow-hidden md:aspect-auto md:h-[346px]">
+              <a href="/contact#contact" className="group relative block aspect-[4/3] overflow-hidden md:aspect-auto md:h-[346px]">
                 <Image
                   src={card.image || '/placeholder.svg'}
                   alt={card.alt}
