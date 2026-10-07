@@ -31,7 +31,7 @@ const faqs = [
   },
 ]
 
-export function Faq() {
+export function Faq({ contactHref = '#contact' }: { contactHref?: string }) {
   const [open, setOpen] = useState<number | null>(null)
 
   return (
@@ -51,7 +51,7 @@ export function Faq() {
             Find answers to common questions about our business verticals, products, services, and more.
           </p>
           <a
-            href="#contact"
+            href={contactHref}
             className="mt-8 inline-flex items-center gap-3 rounded-full border border-[#0c2340] px-9 py-3.5 text-[15px] font-semibold text-[#0c2340] transition-colors hover:bg-[#0c2340] hover:text-white"
           >
             Contact Us
