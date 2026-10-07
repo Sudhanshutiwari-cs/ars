@@ -1,9 +1,10 @@
 import Image from 'next/image'
+import Link from 'next/link'
 
 const businesses = [
-  { title: 'ARS Global Automotive', image: '/images/biz-automotive.png', alt: 'ARS Global Automotive car dealership' },
-  { title: 'ARS MotoCorp', image: '/images/biz-motocorp.png', alt: 'ARS MotoCorp motorcycle showroom' },
-  { title: 'ARS Commercial Mobility', image: '/images/biz-commercial.png', alt: 'ARS Commercial Mobility trucks and bus' },
+  { title: 'ARS Global Automotive', image: '/images/biz-automotive.png', alt: 'ARS Global Automotive car dealership', href: '/contact#contact' },
+  { title: 'ARS MotoCorp', image: '/images/biz-motocorp.png', alt: 'ARS MotoCorp motorcycle showroom', href: '/contact#contact' },
+  { title: 'ARS Commercial Mobility', image: '/images/biz-commercial.png', alt: 'ARS Commercial Mobility trucks and bus', href: '/commercial-mobility' },
 ]
 
 export function OurBusiness() {
@@ -17,7 +18,7 @@ export function OurBusiness() {
         <ul className="mt-6 grid gap-4 md:grid-cols-3">
           {businesses.map((biz) => (
             <li key={biz.title}>
-              <a href="#contact" className="group relative block aspect-[373/284] overflow-hidden">
+              <Link href={biz.href} className="group relative block aspect-[373/284] overflow-hidden">
                 <Image
                   src={biz.image || '/placeholder.svg'}
                   alt={biz.alt}
@@ -27,7 +28,7 @@ export function OurBusiness() {
                 />
                 <div aria-hidden="true" className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-navy via-navy/70 to-transparent" />
                 <h3 className="absolute bottom-5 left-6 text-lg font-semibold text-white">{biz.title}</h3>
-              </a>
+              </Link>
             </li>
           ))}
         </ul>
