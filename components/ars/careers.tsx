@@ -1,4 +1,6 @@
 import Image from 'next/image'
+import Link from 'next/link'
+import { ArrowRight, Briefcase } from 'lucide-react'
 
 const cards = [
   { title: 'Professional Growth', text: 'Learn. Develop. Lead.', image: 'https://res.cloudinary.com/df01whs60/image/upload/v1791689396/Modern_ARS_Corporate_Office_Reception_jf1ztv.png', alt: 'Smiling professional working on a laptop at the ARS office', span: 'md:col-span-8' },
@@ -9,19 +11,32 @@ export function Careers() {
   return (
     <section id="careers" className="bg-white px-3 py-3 font-alt">
       <div className="mx-auto max-w-[1280px] rounded-lg border border-neutral-200 px-6 py-8 md:px-9">
-        <p className="text-[13px] font-medium uppercase tracking-[0.2em] text-ink/70">Careers</p>
-        <h2 className="mt-1 text-3xl font-semibold text-[#0c2340] md:text-[36px]">
-          Be a Part of Our Growth Journey
-        </h2>
-        <span aria-hidden="true" className="mt-3 block h-0.5 w-14 bg-brand-green" />
-        <p className="mt-4 text-[14px] text-ink/70">
-          Empowering motivated individuals to grow with our diversified businesses.
-        </p>
+        <div className="flex flex-col justify-between gap-4 md:flex-row md:items-end">
+          <div>
+            <p className="text-[13px] font-medium uppercase tracking-[0.2em] text-ink/70">Careers</p>
+            <h2 className="mt-1 text-3xl font-semibold text-[#0c2340] md:text-[36px]">
+              Be a Part of Our Growth Journey
+            </h2>
+            <span aria-hidden="true" className="mt-3 block h-0.5 w-14 bg-brand-green" />
+            <p className="mt-4 text-[14px] text-ink/70">
+              Empowering motivated individuals to grow with our diversified businesses.
+            </p>
+          </div>
 
-        <ul className="mt-4 grid gap-4 md:grid-cols-[1.62fr_1fr]">
+          <Link
+            href="/careers"
+            className="inline-flex items-center gap-2 rounded-full bg-[#0b1a36] px-5 py-2.5 text-xs font-semibold uppercase tracking-wider text-white shadow-sm transition-all hover:bg-brand-green hover:text-white"
+          >
+            <Briefcase className="h-3.5 w-3.5 text-brand-green" />
+            Explore All Openings
+            <ArrowRight className="h-3.5 w-3.5" />
+          </Link>
+        </div>
+
+        <ul className="mt-6 grid gap-4 md:grid-cols-[1.62fr_1fr]">
           {cards.map((card) => (
             <li key={card.title}>
-              <a href="/contact#contact" className="group relative block aspect-[4/3] overflow-hidden md:aspect-auto md:h-[346px]">
+              <Link href="/careers" className="group relative block aspect-[4/3] overflow-hidden md:aspect-auto md:h-[346px]">
                 <Image
                   src={card.image || '/placeholder.svg'}
                   alt={card.alt}
@@ -34,7 +49,7 @@ export function Careers() {
                   <h3 className="text-2xl font-semibold">{card.title}</h3>
                   <p className="mt-1 text-[13px] text-white/90">{card.text}</p>
                 </div>
-              </a>
+              </Link>
             </li>
           ))}
         </ul>

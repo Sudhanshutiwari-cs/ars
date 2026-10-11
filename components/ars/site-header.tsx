@@ -11,8 +11,9 @@ const navLinks = [
   { label: 'Home', href: '/', route: '/' },
   { label: 'About Us', href: '/about', route: '/about' },
   { label: 'Ventures', href: '/#business', route: '/commercial-mobility', dropdown: true },
-  { label: 'Careers', href: '/#careers' },
-  { label: 'Blogs', href: '/#blogs' },
+  { label: 'Gallery', href: '/gallery', route: '/gallery' },
+  { label: 'Careers', href: '/careers', route: '/careers' },
+  { label: 'Blogs', href: '/blog', route: '/blog' },
   { label: 'Contact Us', href: '/contact', route: '/contact' },
 ]
 
@@ -71,7 +72,11 @@ export function SiteHeader() {
   const isVentureActive = ['/commercial-mobility', '/global-automotive', '/global-automobiles', '/ars-motocorp', '/motocorp'].includes(pathname)
   const links = navLinks.map((link) => ({
     ...link,
-    active: link.dropdown ? isVentureActive : link.route === pathname,
+    active: link.dropdown
+      ? isVentureActive
+      : link.route === '/'
+        ? pathname === '/'
+        : pathname.startsWith(link.route),
   }))
 
   useEffect(() => {
@@ -104,7 +109,7 @@ export function SiteHeader() {
         <Logo />
 
         <nav aria-label="Primary" className="hidden lg:block">
-          <ul className="flex items-center gap-9">
+          <ul className="flex items-center gap-6 xl:gap-8">
             {links.map((link) => {
               if (link.dropdown) {
                 return (
