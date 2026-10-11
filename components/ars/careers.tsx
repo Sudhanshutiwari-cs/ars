@@ -1,8 +1,8 @@
 import Image from 'next/image'
 
 const cards = [
-  { title: 'Professional Growth', text: 'Learn. Develop. Lead.', image: '/images/career-growth.png', alt: 'Smiling professional working on a laptop at the ARS office', span: 'md:col-span-8' },
-  { title: 'Our People', text: 'The driving force behind our success.', image: '/images/career-people.png', alt: 'ARS team members gathered around a laptop', span: 'md:col-span-5' },
+  { title: 'Professional Growth', text: 'Learn. Develop. Lead.', image: 'https://res.cloudinary.com/df01whs60/image/upload/v1791689396/Modern_ARS_Corporate_Office_Reception_jf1ztv.png', alt: 'Smiling professional working on a laptop at the ARS office', span: 'md:col-span-8' },
+  { title: 'Our People', text: 'The driving force behind our success.', image: 'https://res.cloudinary.com/df01whs60/image/upload/v1791689515/ARS_Team_Collaboration_in_Automotive_Showroom_ts64zs.png', alt: 'ARS team members gathered around a laptop', span: 'md:col-span-5' },
 ]
 
 export function Careers() {

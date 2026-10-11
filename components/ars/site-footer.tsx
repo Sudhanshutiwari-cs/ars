@@ -88,7 +88,7 @@ export function SiteFooter() {
       <div className="mx-auto grid max-w-[1240px] gap-10 px-6 py-8 md:px-10 lg:grid-cols-[330px_1fr_200px]">
         <div>
           <div className="flex items-center gap-4">
-            <Image src="/images/wolf-logo.png" alt="" width={72} height={72} className="h-[72px] w-[72px] object-cover mix-blend-screen" />
+            <Image src="https://res.cloudinary.com/df01whs60/image/upload/v1791686790/Intense_Monochrome_Wolf_Emblem_lxin4e.png" alt="" width={72} height={72} className="h-[72px] w-[72px] object-cover mix-blend-screen" />
             <span className="flex flex-col leading-none">
               <span className="text-[26px] tracking-[0.12em]">ARS</span>
               <span className="mt-1 text-[8px] tracking-[0.28em]">IMPERIAL LANDMARK</span>

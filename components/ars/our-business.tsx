@@ -2,9 +2,9 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 const businesses = [
-  { title: 'ARS Global Automotive', image: '/images/biz-automotive.png', alt: 'ARS Global Automotive car dealership', href: '/contact#contact' },
-  { title: 'ARS MotoCorp', image: '/images/biz-motocorp.png', alt: 'ARS MotoCorp motorcycle showroom', href: '/contact#contact' },
-  { title: 'ARS Commercial Mobility', image: '/images/biz-commercial.png', alt: 'ARS Commercial Mobility trucks and bus', href: '/commercial-mobility' },
+  { title: 'ARS Global Automotive', image: 'https://res.cloudinary.com/df01whs60/image/upload/v1791688875/Luxury_Showroom_at_Sunset_ahzego.png', alt: 'ARS Global Automotive car dealership', href: '/contact#contact' },
+  { title: 'ARS MotoCorp', image: 'https://res.cloudinary.com/df01whs60/image/upload/v1791689039/High-End_Motorcycle_Showroom_Display_kcppgn.png', alt: 'ARS MotoCorp motorcycle showroom', href: '/contact#contact' },
+  { title: 'ARS Commercial Mobility', image: 'https://res.cloudinary.com/df01whs60/image/upload/v1791689220/Sunset_ARS_Commercial_Mobility_Showroom_i1zy1v.png', alt: 'ARS Commercial Mobility trucks and bus', href: '/commercial-mobility' },
 ]
 
 export function OurBusiness() {

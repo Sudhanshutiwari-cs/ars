@@ -21,9 +21,9 @@ const features: { icon: LucideIcon; title: string; text: string[] }[] = [
 ]
 
 const panels = [
-  { src: '/images/panel-car.png', alt: 'Black SUV at sunset', className: 'left-[3%] top-[30%] h-[44%] w-[24%]' },
+  { src: 'https://res.cloudinary.com/df01whs60/image/upload/v1791689906/Toyota_Fortuner_at_Golden_Sunset_zsehcm.png', alt: 'Black SUV at sunset', className: 'left-[3%] top-[30%] h-[44%] w-[24%]' },
   { src: '/images/panel-bike.png', alt: 'Sport motorcycle in showroom', className: 'left-[20%] top-[28%] h-[47%] w-[24%]' },
-  { src: '/images/panel-truck.png', alt: 'White commercial truck', className: 'left-[38%] top-[24%] h-[51%] w-[24%]' },
+  { src: 'https://res.cloudinary.com/df01whs60/image/upload/v1791690142/Golden_Hour_Heavy-Duty_Truck_kwpckv.png', alt: 'White commercial truck', className: 'left-[38%] top-[24%] h-[51%] w-[24%]' },
 ]
 
 export function WhyChooseUs() {
