@@ -30,7 +30,7 @@ export function BrandStrip({
   const isLight = tone === 'light'
   return (
     <ul
-      className={cn('flex flex-wrap items-center gap-y-4 xl:flex-nowrap', className)}
+      className={cn('flex items-center overflow-x-auto pb-1 scrollbar-none sm:flex-wrap sm:gap-y-4 xl:flex-nowrap', className)}
       aria-label="Brands we represent"
     >
       {brands.map((brand, i) => {
@@ -39,8 +39,8 @@ export function BrandStrip({
           <li
             key={brand.name}
             className={cn(
-              'flex items-center first:pl-0',
-              isLight ? 'px-4 md:px-5' : 'px-2 xl:px-2.5',
+              'flex shrink-0 items-center first:pl-0',
+              isLight ? 'px-3 sm:px-4 md:px-5' : 'px-2 xl:px-2.5',
               i !== 0 && (isLight ? 'border-l border-white/25' : 'border-l border-transparent'),
             )}
           >
