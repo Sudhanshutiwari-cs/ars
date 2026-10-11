@@ -3,6 +3,7 @@ import { SiteHeader } from '@/components/ars/site-header'
 import { AutomotiveHero } from '@/components/ars/global-automotive/automotive-hero'
 import { AutomotiveVenture } from '@/components/ars/global-automotive/automotive-venture'
 import { AutomotiveVehicles } from '@/components/ars/global-automotive/automotive-vehicles'
+import { AutomotiveDealershipImages } from '@/components/ars/global-automotive/automotive-dealership-images'
 import { ContactBanner } from '@/components/ars/contact-banner'
 import { Faq } from '@/components/ars/faq'
 import { SiteFooter } from '@/components/ars/site-footer'
@@ -38,6 +39,7 @@ export default function GlobalAutomotivePage() {
         <AutomotiveHero />
         <AutomotiveVenture />
         <AutomotiveVehicles />
+        <AutomotiveDealershipImages />
         <ContactBanner />
         <Faq contactHref="/contact" />
       </main>

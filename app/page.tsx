@@ -7,6 +7,7 @@ import { Partners } from '@/components/ars/partners'
 import { OurBusiness } from '@/components/ars/our-business'
 import { Presence } from '@/components/ars/presence'
 import { Testimonials } from '@/components/ars/testimonials'
+import { DealershipShowcase } from '@/components/ars/dealership-showcase'
 import { Careers } from '@/components/ars/careers'
 import { ContactBanner } from '@/components/ars/contact-banner'
 import { Blogs } from '@/components/ars/blogs'
@@ -44,6 +45,7 @@ export default function Page() {
         <OurBusiness />
         <Presence />
         <Testimonials />
+        <DealershipShowcase />
         <Careers />
         <ContactBanner />
         <Blogs />

@@ -3,6 +3,7 @@ import { SiteHeader } from '@/components/ars/site-header'
 import { MotocorpHero } from '@/components/ars/motocorp/motocorp-hero'
 import { MotocorpVenture } from '@/components/ars/motocorp/motocorp-venture'
 import { MotocorpVehicles } from '@/components/ars/motocorp/motocorp-vehicles'
+import { MotocorpDealershipImages } from '@/components/ars/motocorp/motocorp-dealership-images'
 import { ContactBanner } from '@/components/ars/contact-banner'
 import { Faq } from '@/components/ars/faq'
 import { SiteFooter } from '@/components/ars/site-footer'
@@ -39,6 +40,7 @@ export default function MotocorpPage() {
         <MotocorpHero />
         <MotocorpVenture />
         <MotocorpVehicles />
+        <MotocorpDealershipImages />
         <ContactBanner />
         <Faq contactHref="/contact" />
       </main>
