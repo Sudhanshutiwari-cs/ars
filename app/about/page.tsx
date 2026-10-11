@@ -8,9 +8,22 @@ import { Faq } from '@/components/ars/faq'
 import { SiteFooter } from '@/components/ars/site-footer'
 
 export const metadata: Metadata = {
-  title: 'About Us | ARS Imperial Landmark',
+  title: 'About ARS Imperial Landmark | Sahil Singh',
   description:
-    'ARS Imperial Landmark is a leading automotive dealership group in North & East India, driving progress through mobility with a customer-first approach.',
+    "Discover the story of ARS Imperial Landmark, established in 2020 and built on a 29-year automotive dealership legacy. Learn about CMD Sahil Singh, the group's vision and its three business verticals.",
+  keywords: [
+    'About ARS Imperial Landmark',
+    'ARS Group history',
+    'ARS Imperial Group founder',
+    'Sahil Singh ARS',
+    'ARS founder Sahil Singh',
+    'ARS Group Noida',
+    'ARS automotive legacy',
+    'ARS Group leadership',
+  ],
+  alternates: {
+    canonical: 'https://arsimperiallandmark.com/about-us/',
+  },
 }
 
 export default function AboutPage() {

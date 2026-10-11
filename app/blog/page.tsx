@@ -9,9 +9,21 @@ import { SiteFooter } from '@/components/ars/site-footer'
 import { blogPosts } from '@/lib/blog-data'
 
 export const metadata: Metadata = {
-  title: 'Automotive Blog & Mobility Insights | ARS Imperial Landmark',
+  title: 'Automotive News & Insights | ARS Imperial Landmark',
   description:
-    'Read the latest articles on EV adoption, vehicle care guides, commercial transport trends, and automotive retail insights from ARS Imperial Landmark experts.',
+    'Explore automotive insights, dealership updates, mobility trends, electric vehicles and business news from ARS Imperial Landmark and its automotive ventures.',
+  keywords: [
+    'ARS Imperial Landmark blogs',
+    'ARS Group news',
+    'automotive industry news India',
+    'dealership industry insights',
+    'electric vehicle trends India',
+    'commercial vehicle industry news',
+    'two-wheeler industry updates',
+  ],
+  alternates: {
+    canonical: 'https://arsimperiallandmark.com/blogs/',
+  },
 }
 
 export default function BlogPage() {

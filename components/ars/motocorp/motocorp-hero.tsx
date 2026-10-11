@@ -27,12 +27,11 @@ export function MotocorpHero() {
             ARS MotoCorp
             <span aria-hidden="true" className="h-px w-[74px] bg-white/80" />
           </p>
-          <h1 className="mt-3 text-[38px] font-bold leading-[1.12] md:text-[46px]">
-            Built for the Ride
-            <br />
-            <span className="text-[#6cb6ff]">Two-Wheeler Experiences</span>
-            <br />
-            Driven by Trust
+          <h1 className="mt-3 text-[34px] font-bold leading-[1.15] md:text-[44px]">
+            ARS MotoCorp
+            <span className="block text-[24px] font-light text-[#6cb6ff] md:text-[32px]">
+              Two-Wheeler Mobility
+            </span>
           </h1>
           <p className="mt-5 max-w-[420px] text-[13px] leading-[1.6] text-white/90">
             ARS MotoCorp operates across the two-wheeler segment, representing leading motorcycle and scooter brands and delivering reliable mobility solutions through its dealership network.

@@ -40,12 +40,11 @@ export function CommercialHero() {
             ARS Commercial Mobility
             <span aria-hidden="true" className="h-px w-[74px] bg-white/80" />
           </p>
-          <h1 className="mt-3 text-[38px] font-bold leading-[1.12] md:text-[46px]">
-            Powering
-            <br />
-            <span className="text-[#6cb6ff]">Commercial Mobility</span>
-            <br />
-            Across India
+          <h1 className="mt-3 text-[32px] font-bold leading-[1.15] md:text-[42px]">
+            ARS Commercial Mobility
+            <span className="block text-[22px] font-light text-[#6cb6ff] md:text-[30px]">
+              Commercial &amp; Heavy-Duty Vehicles
+            </span>
           </h1>
           <p className="mt-5 max-w-[350px] text-[13px] leading-[1.6] text-white/90">
             {"ARS Commercial Mobility delivers reliable, efficient, and sustainable mobility solutions for businesses, keeping India's economy moving forward."}

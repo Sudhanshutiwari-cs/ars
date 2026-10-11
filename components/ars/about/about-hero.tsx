@@ -44,17 +44,18 @@ export function AboutHero() {
           </ol>
         </nav>
 
-        <div className="mt-12 max-w-[440px]">
+        <div className="mt-12 max-w-[480px]">
           <p className="flex items-center gap-3 text-[14px] font-medium uppercase tracking-[0.22em] text-[#9db8e8]">
             About us
             <span aria-hidden="true" className="h-px w-5 bg-[#9db8e8]" />
           </p>
-          <h1 className="mt-2 text-[38px] font-bold leading-[1.18] md:text-[44px]">
-            Driving Progress
-            <br />
-            Through Mobility
+          <h1 className="mt-2 text-[36px] font-bold leading-[1.18] md:text-[42px]">
+            About ARS Imperial Landmark
+            <span className="mt-2 block text-[22px] font-light text-[#9db8e8] md:text-[26px]">
+              Driving Progress Through Mobility
+            </span>
           </h1>
-          <p className="mt-6 max-w-[300px] text-[12.5px] leading-[1.75] text-white/85 sm:max-w-[290px] md:text-[12px]">
+          <p className="mt-6 max-w-[340px] text-[12.5px] leading-[1.75] text-white/85 sm:max-w-[320px] md:text-[12px]">
             ARS Imperial Landmark is a leading automotive dealership group in North &amp; East India,
             committed to delivering exceptional mobility solutions. With a strong legacy, a diverse
             portfolio and a customer-first approach, we drive progress for a better tomorrow.

@@ -25,17 +25,15 @@ export function ChairmanMessage() {
 
           <div className="mt-5 space-y-4 text-[13px] leading-[1.6] text-[#3d4a63]">
             <p>
-              Mr. Sahil Singh is the CMD of ARS Imperiall Landmark, bringing a forward-thinking
-              vision and a strong commitment to building a trusted and future-ready automotive group.
-              With a rich legacy of experience in the automotive industry and a deep understanding of
-              the evolving mobility landscape, he leads the group with a focus on innovation,
-              operational excellence, and sustainable growth.
+              Established in 2020 and built on a rich 29-year automotive dealership legacy, ARS Imperial Landmark
+              is led by Chairman &amp; Managing Director Mr. Sahil Singh. Bringing a forward-thinking vision and an
+              uncompromising commitment to customer trust, he spearheads the group’s expansion across North and East India.
             </p>
             <p>
-              Under his leadership, ARS Imperial Landmark continues to strengthen its multi-brand
-              presence, expand its footprint across India, and create greater value for customers,
-              partners, employees and stakeholders. His strategic direction ensures that the group
-              remains agile, customer-centric, and well-positioned for the future of mobility.
+              Under CMD Sahil Singh’s strategic direction, ARS Imperial Landmark drives operational excellence
+              across its three dedicated business verticals — ARS Global Automotive (passenger cars), ARS MotoCorp
+              (two-wheelers), and ARS Commercial Mobility (trucks, buses &amp; EVs) — representing leading domestic
+              and international vehicle manufacturers with over 24+ dealerships and 68+ outlets.
             </p>
           </div>
 

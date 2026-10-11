@@ -37,7 +37,7 @@ export function CareersHero() {
             <span aria-hidden="true" className="h-0.5 w-10 bg-brand-green" />
           </p>
           <h1 className="mt-3 text-balance text-3xl font-bold tracking-tight text-white sm:text-4xl md:text-5xl lg:leading-[1.15]">
-            Join Our Team &bull; Apply for Your Next Role
+            Build Your Career With ARS
           </h1>
           <p className="mt-4 max-w-2xl text-[15px] leading-relaxed text-white/80 md:text-[16px]">
             At ARS Imperial Landmark, we empower talent across passenger vehicles, two-wheelers, and

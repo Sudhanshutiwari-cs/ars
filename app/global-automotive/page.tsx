@@ -8,9 +8,26 @@ import { Faq } from '@/components/ars/faq'
 import { SiteFooter } from '@/components/ars/site-footer'
 
 export const metadata: Metadata = {
-  title: 'ARS Global Automotive | ARS Imperial Landmark',
+  title: 'ARS Global Automotive | Car Dealership Group India',
   description:
-    'ARS Global Automotive represents leading passenger vehicle brands across North and East India, delivering trusted mobility solutions and premium dealership experiences.',
+    'Explore ARS Global Automotive, part of ARS Imperial Landmark, representing leading passenger vehicle brands including Mahindra, Toyota, Kia, Jeep, Maruti Suzuki, Tata Motors, Honda and Hyundai.',
+  keywords: [
+    'ARS Global Automotive',
+    'ARS Imperial cars',
+    'ARS car dealership group',
+    'ARS four-wheeler dealerships',
+    'ARS automotive dealerships India',
+    'ARS passenger vehicles',
+    'ARS Group cars',
+    'Mahindra dealership group',
+    'Toyota dealership group',
+    'Kia dealerships',
+    'Jeep dealerships',
+    'passenger vehicles India',
+  ],
+  alternates: {
+    canonical: 'https://arsimperiallandmark.com/ventures/ars-global-automotive/',
+  },
 }
 
 export default function GlobalAutomotivePage() {

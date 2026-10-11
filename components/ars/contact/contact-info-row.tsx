@@ -5,19 +5,19 @@ const items = [
   {
     icon: Phone,
     title: 'Phone',
-    lines: ['+91 120 456 7890', 'Mon – Sat, 9 AM – 6 PM'],
-    href: 'tel:+911204567890',
+    lines: ['+91 6202122112', 'Mon – Sat, 10 AM – 7 PM'],
+    href: 'tel:6202122112',
   },
   {
     icon: Mail,
     title: 'Email',
-    lines: ['hello@arsgroup.in', 'We reply within 24 hours'],
-    href: 'mailto:hello@arsgroup.in',
+    lines: ['info@arsimperial.com', 'We reply within 24 hours'],
+    href: 'mailto:info@arsimperial.com',
   },
   {
     icon: MapPin,
-    title: 'Office Address',
-    lines: ['ARS Group, Sector 62,', 'Noida, Uttar Pradesh – 201309,', 'India'],
+    title: 'Showroom & Location',
+    lines: ['KOMAKI Noida (ARS MotoCorp)', 'Pillar Number 99, Dadri Main Rd,', 'Bhangel, Salarpur, Noida, UP – 201301'],
   },
 ]
 

@@ -8,9 +8,21 @@ import { Faq } from '@/components/ars/faq'
 import { SiteFooter } from '@/components/ars/site-footer'
 
 export const metadata: Metadata = {
-  title: 'Careers & Job Application | ARS Imperial Landmark',
+  title: 'Careers at ARS Imperial Landmark | Join Our Team',
   description:
-    'Apply to join ARS Imperial Landmark. Fill out our online career application form for opportunities across sales, service diagnostics, customer relations, logistics, and management.',
+    'Explore career opportunities at ARS Imperial Landmark across automotive retail, two-wheeler dealerships and commercial mobility. Discover opportunities to grow with the ARS team.',
+  keywords: [
+    'ARS Imperial Landmark careers',
+    'ARS Group jobs',
+    'ARS automotive careers',
+    'automotive dealership jobs',
+    'ARS Motocorp careers',
+    'commercial vehicle jobs',
+    'automotive jobs Noida',
+  ],
+  alternates: {
+    canonical: 'https://arsimperiallandmark.com/careers/',
+  },
 }
 
 export default function CareersPage() {

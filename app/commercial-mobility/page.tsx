@@ -8,9 +8,26 @@ import { Faq } from '@/components/ars/faq'
 import { SiteFooter } from '@/components/ars/site-footer'
 
 export const metadata: Metadata = {
-  title: 'ARS Commercial Mobility | ARS Imperial Landmark',
+  title: 'ARS Commercial Mobility | Trucks, Buses & EVs',
   description:
-    'ARS Commercial Mobility delivers reliable, efficient and sustainable commercial vehicle solutions for businesses across India.',
+    'Explore ARS Commercial Mobility, part of ARS Imperial Landmark, representing commercial and heavy-duty vehicle brands including Mahindra Commercial Vehicles, Tata Motors Commercial Vehicles, Ashok Leyland and Altigreen.',
+  keywords: [
+    'ARS Commercial Mobility',
+    'ARS Commercial',
+    'ARS heavy vehicles',
+    'ARS commercial vehicles',
+    'ARS trucks and buses',
+    'ARS commercial dealership group',
+    'ARS commercial mobility India',
+    'commercial vehicle dealerships India',
+    'heavy-duty trucks',
+    'commercial buses',
+    'electric commercial vehicles',
+    'fleet mobility solutions',
+  ],
+  alternates: {
+    canonical: 'https://arsimperiallandmark.com/ventures/ars-commercial-mobility/',
+  },
 }
 
 export default function CommercialMobilityPage() {

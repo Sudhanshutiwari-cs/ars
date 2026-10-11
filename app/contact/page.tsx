@@ -7,9 +7,20 @@ import { Faq } from '@/components/ars/faq'
 import { SiteFooter } from '@/components/ars/site-footer'
 
 export const metadata: Metadata = {
-  title: 'Contact Us | ARS Imperial Landmark',
+  title: 'Contact ARS Imperial Landmark | Noida, India',
   description:
-    'Connect with the ARS Group team for partnerships, business queries, dealership inquiries, careers or support across North and East India.',
+    'Contact ARS Imperial Landmark for automotive dealership and business enquiries. Call 6202122112 or visit the listed ARS MotoCorp location in Noida, Uttar Pradesh.',
+  keywords: [
+    'ARS Imperial Landmark contact',
+    'ARS Group Noida contact number',
+    'ARS Imperial Noida contact',
+    'ARS Group address',
+    'ARS MotoCorp Noida contact',
+    'ARS Imperial Landmark phone number',
+  ],
+  alternates: {
+    canonical: 'https://arsimperiallandmark.com/contact-us/',
+  },
 }
 
 export default function ContactPage() {

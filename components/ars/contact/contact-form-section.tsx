@@ -28,11 +28,13 @@ export function ContactFormSection() {
 
           <div className="mt-6 overflow-hidden rounded-md border border-[#dbe3ee]">
             <iframe
-              title="ARS Group office location — Sector 62, Noida"
-              src="https://maps.google.com/maps?q=Sector%2062%2C%20Noida%2C%20Uttar%20Pradesh%20201309&z=14&output=embed"
-              className="block h-[200px] w-full md:h-[230px]"
+              title="ARS Imperial Landmark Group location"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3503.4263548216545!2d77.31505151118544!3d28.586983686046047!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce5ba45640419%3A0xc104b800e1c8d628!2sARS%20Imperial%20Landmark%20Group!5e0!3m2!1sen!2sin!4v1791723308733!5m2!1sen!2sin"
+              className="block h-[220px] w-full md:h-[260px]"
+              style={{ border: 0 }}
+              allowFullScreen
               loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
+              referrerPolicy="strict-origin-when-cross-origin"
             />
           </div>
         </div>

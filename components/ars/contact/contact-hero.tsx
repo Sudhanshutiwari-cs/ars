@@ -43,10 +43,8 @@ export function ContactHero() {
             Get in touch
             <span aria-hidden="true" className="h-px w-[60px] bg-[#0b2a5b]" />
           </p>
-          <h1 className="mt-3 text-[38px] font-bold leading-[1.1] text-[#0b2a5b] md:text-[44px]">
-            Connect with
-            <br />
-            ARS Group Team
+          <h1 className="mt-3 text-[36px] font-bold leading-[1.15] text-[#0b2a5b] md:text-[44px]">
+            Contact ARS Imperial Landmark
           </h1>
           <p className="mt-6 text-[14px] leading-relaxed text-ink/60">
             {

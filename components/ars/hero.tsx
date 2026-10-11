@@ -24,8 +24,8 @@ const slides: Slide[] = [
   {
     id: 'automotive',
     eyebrow: 'ARS Global Automotive',
-    title: 'Driven by Excellence',
-    subtitle: ['Mobility for Every Journey'],
+    title: 'ARS Imperial Landmark',
+    subtitle: ['Driving Mobility Across India'],
     description:
       'Representing leading passenger vehicle brands across North and East India, ARS Global Automotive delivers trusted mobility solutions through a growing network of professional dealerships.',
     stats: [

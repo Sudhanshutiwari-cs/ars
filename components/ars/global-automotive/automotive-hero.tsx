@@ -27,12 +27,11 @@ export function AutomotiveHero() {
             ARS Global Automotive
             <span aria-hidden="true" className="h-px w-[74px] bg-white/80" />
           </p>
-          <h1 className="mt-3 text-[38px] font-bold leading-[1.12] md:text-[46px]">
-            Driven by
-            <br />
-            <span className="text-[#6cb6ff]">Passenger Excellence</span>
-            <br />
-            Across India
+          <h1 className="mt-3 text-[34px] font-bold leading-[1.15] md:text-[44px]">
+            ARS Global Automotive
+            <span className="block text-[24px] font-light text-[#6cb6ff] md:text-[32px]">
+              Passenger Mobility
+            </span>
           </h1>
           <p className="mt-5 max-w-[420px] text-[13px] leading-[1.6] text-white/90">
             Representing leading passenger vehicle brands across North and East India, ARS Global Automotive delivers trusted mobility solutions through a growing network of professional dealerships.
