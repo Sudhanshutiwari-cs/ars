@@ -61,6 +61,17 @@ export const metadata: Metadata = {
       'ARS Imperial Landmark is an automotive dealership group with 24+ dealerships and approximately 68 outlets, representing leading car, two-wheeler and commercial vehicle brands across North and East India.',
     images: ['https://res.cloudinary.com/df01whs60/image/upload/v1791687797/ARS_Global_Automotive_at_Sunset_hychnu.png'],
   },
+  icons: {
+    icon: [
+      { url: 'https://res.cloudinary.com/df01whs60/image/upload/v1791686790/Intense_Monochrome_Wolf_Emblem_lxin4e.png' },
+      { url: '/icon.png', sizes: 'any', type: 'image/png' },
+    ],
+    shortcut: 'https://res.cloudinary.com/df01whs60/image/upload/v1791686790/Intense_Monochrome_Wolf_Emblem_lxin4e.png',
+    apple: 'https://res.cloudinary.com/df01whs60/image/upload/v1791686790/Intense_Monochrome_Wolf_Emblem_lxin4e.png',
+  },
+  verification: {
+    google: 'Si-vc-ss8g3sYtICTdBsueN-U8yhw_cFOa4w4tNojNo',
+  },
   robots: {
     index: true,
     follow: true,
@@ -138,6 +149,16 @@ export default function RootLayout({
   return (
     <html lang="en" className={`light ${poppins.variable} ${figtree.variable} bg-white`}>
       <head>
+        <meta name="google-site-verification" content="Si-vc-ss8g3sYtICTdBsueN-U8yhw_cFOa4w4tNojNo" />
+        <link
+          rel="icon"
+          href="https://res.cloudinary.com/df01whs60/image/upload/v1791686790/Intense_Monochrome_Wolf_Emblem_lxin4e.png"
+          sizes="any"
+        />
+        <link
+          rel="apple-touch-icon"
+          href="https://res.cloudinary.com/df01whs60/image/upload/v1791686790/Intense_Monochrome_Wolf_Emblem_lxin4e.png"
+        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
