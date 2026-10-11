@@ -21,9 +21,7 @@ export default function CommercialMobilityPage() {
         <CommercialHero />
         <CommercialVenture />
         <CommercialVehicles />
-        <div className="bg-white py-8">
-          <ContactBanner />
-        </div>
+        <ContactBanner />
         <Faq contactHref="/contact" />
       </main>
       <SiteFooter />

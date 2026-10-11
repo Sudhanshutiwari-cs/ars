@@ -33,8 +33,8 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className={`${poppins.variable} ${figtree.variable} bg-background`}>
-      <body className="font-sans antialiased">
+    <html lang="en" className={`light ${poppins.variable} ${figtree.variable} bg-white`}>
+      <body className="bg-white font-sans antialiased">
         {children}
         <WhatsAppButton />
         {process.env.NODE_ENV === 'production' && <Analytics />}

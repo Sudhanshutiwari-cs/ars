@@ -104,7 +104,7 @@ export function Hero() {
       id="home"
       aria-roledescription="carousel"
       aria-label="ARS Imperial Landmark ventures"
-      className="relative mt-2 overflow-hidden bg-navy-deep"
+      className="relative overflow-hidden bg-navy-deep"
       onMouseEnter={() => setPaused(true)}
       onMouseLeave={() => setPaused(false)}
       onFocus={() => setPaused(true)}

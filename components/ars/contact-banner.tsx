@@ -3,7 +3,7 @@ import { ArrowRight, MessageSquareText } from 'lucide-react'
 
 export function ContactBanner() {
   return (
-    <section id="contact" className="px-3">
+    <section id="contact" className="bg-white px-3 py-6 font-alt md:py-8">
       <div className="relative mx-auto max-w-[1280px] overflow-hidden rounded-sm bg-[#0a2440]">
         <div className="absolute inset-y-0 right-0 w-full md:w-[68%]">
           <Image
