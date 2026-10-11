@@ -25,8 +25,8 @@ const columns: { title: string; links: FooterLink[] }[] = [
   {
     title: 'Ventures',
     links: [
-      { label: 'ARS Global Automotive', href: '/#business' },
-      { label: 'ARS MotoCorp', href: '/#business' },
+      { label: 'ARS Global Automotive', href: '/global-automotive' },
+      { label: 'ARS MotoCorp', href: '/ars-motocorp' },
       { label: 'ARS Commercial Mobility', href: '/commercial-mobility' },
     ],
   },

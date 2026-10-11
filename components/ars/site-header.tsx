@@ -20,7 +20,7 @@ const ventureItems = [
   {
     name: 'ARS MotoCorp',
     subtitle: 'Two-Wheeler Mobility',
-    href: '/#motocorp',
+    href: '/ars-motocorp',
     icon: Bike,
   },
   {
@@ -32,7 +32,7 @@ const ventureItems = [
   {
     name: 'Global Automobiles',
     subtitle: 'ARS Global Automotive',
-    href: '/#global-automotive',
+    href: '/global-automotive',
     icon: Car,
   },
 ]
@@ -68,7 +68,11 @@ export function SiteHeader() {
   const [mobileVenturesOpen, setMobileVenturesOpen] = useState(true)
   const dropdownRef = useRef<HTMLLIElement>(null)
   const pathname = usePathname()
-  const links = navLinks.map((link) => ({ ...link, active: link.route === pathname }))
+  const isVentureActive = ['/commercial-mobility', '/global-automotive', '/global-automobiles', '/ars-motocorp', '/motocorp'].includes(pathname)
+  const links = navLinks.map((link) => ({
+    ...link,
+    active: link.dropdown ? isVentureActive : link.route === pathname,
+  }))
 
   useEffect(() => {
     setVenturesOpen(false)

@@ -34,7 +34,7 @@ const slides: Slide[] = [
       { title: 'North & East', text: ['India Presence'] },
       { title: 'Multiple', text: ['EV, Petrol & Diesel', 'Options'] },
     ],
-    cta: { label: 'Explore ARS Global Automotive', href: '#business' },
+    cta: { label: 'Explore ARS Global Automotive', href: '/global-automotive' },
     image: {
       src: 'https://res.cloudinary.com/df01whs60/image/upload/v1791687797/ARS_Global_Automotive_at_Sunset_hychnu.png',
       alt: 'ARS Global Automotive dealership with SUVs parked in front at sunset',
@@ -54,7 +54,7 @@ const slides: Slide[] = [
       { title: 'Motorcycles &', text: ['Scooters'] },
       { title: 'North & East', text: ['India Presence'] },
     ],
-    cta: { label: 'Explore ARS MotoCorp', href: '#business' },
+    cta: { label: 'Explore ARS MotoCorp', href: '/ars-motocorp' },
     image: {
       src: 'https://res.cloudinary.com/df01whs60/image/upload/v1791687101/Analysis_output_1_s0ropm.png',
       alt: 'ARS MotoCorp showroom at dusk with motorcycles and scooters lined up outside',
