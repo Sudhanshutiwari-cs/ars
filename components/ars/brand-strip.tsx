@@ -10,8 +10,8 @@ type StripBrand = {
 const brands: StripBrand[] = [
   { name: 'Mahindra', icon: '/logos/mahindra-mono.svg', label: 'mahindra' },
   { name: 'Toyota', icon: '/logos/toyota-mono.svg', label: 'TOYOTA' },
-  { name: 'Kia', icon: '/logos/kia-mono.svg', iconClass: 'h-9 w-14' },
-  { name: 'Jeep', icon: '/logos/jeep-mono.svg', iconClass: 'h-9 w-14' },
+  { name: 'Kia', icon: '/logos/kia-mono.svg', iconClass: 'h-6 w-11 sm:h-9 sm:w-14' },
+  { name: 'Jeep', icon: '/logos/jeep-mono.svg', iconClass: 'h-6 w-11 sm:h-9 sm:w-14' },
   { name: 'Maruti Suzuki', icon: '/logos/suzuki-mono.svg', label: 'MARUTI SUZUKI', iconClass: 'h-4 w-4' },
   { name: 'Tata Motors', icon: '/logos/tata-mono.svg', label: 'TATA MOTORS' },
   { name: 'Honda', icon: '/logos/honda-mono.svg', label: 'HONDA' },
@@ -30,7 +30,7 @@ export function BrandStrip({
   const isLight = tone === 'light'
   return (
     <ul
-      className={cn('flex items-center overflow-x-auto pb-1 scrollbar-none sm:flex-wrap sm:gap-y-4 xl:flex-nowrap', className)}
+      className={cn('flex w-full min-w-0 max-w-full items-center overflow-x-auto pb-1 scrollbar-none sm:flex-wrap sm:gap-y-4 xl:flex-nowrap', className)}
       aria-label="Brands we represent"
     >
       {brands.map((brand, i) => {

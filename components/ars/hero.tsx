@@ -137,7 +137,7 @@ export function Hero() {
       id="home"
       aria-roledescription="carousel"
       aria-label="ARS Imperial Landmark ventures"
-      className="relative overflow-hidden bg-navy-deep touch-pan-y"
+      className="relative w-full max-w-full overflow-hidden bg-navy-deep touch-pan-y"
       onMouseEnter={() => setPaused(true)}
       onMouseLeave={() => setPaused(false)}
       onFocus={() => setPaused(true)}
@@ -146,7 +146,7 @@ export function Hero() {
       onTouchMove={handleTouchMove}
       onTouchEnd={handleTouchEnd}
     >
-      <div className="grid">
+      <div className="grid w-full">
         {slides.map((slide, index) => {
           const isActive = index === active
           return (
@@ -158,7 +158,7 @@ export function Hero() {
               aria-hidden={!isActive}
               inert={!isActive}
               className={cn(
-                'relative col-start-1 row-start-1 transition-opacity duration-700 ease-out',
+                'relative col-start-1 row-start-1 w-full min-w-0 max-w-full transition-opacity duration-700 ease-out',
                 isActive ? 'z-10 opacity-100' : 'z-0 opacity-0 pointer-events-none',
               )}
             >
@@ -185,38 +185,42 @@ export function Hero() {
                 className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-black/70 to-transparent"
               />
 
-              <div className="relative mx-auto flex min-h-[520px] max-w-[1280px] flex-col justify-between px-4 pb-20 pt-8 sm:px-8 sm:pb-14 sm:pt-16 md:px-[84px] md:pt-20 lg:min-h-[560px]">
-                <div className="max-w-[580px] text-white">
+              <div className="relative mx-auto flex min-h-[500px] w-full min-w-0 max-w-[1280px] flex-col justify-between px-5 pb-16 pt-6 sm:px-8 sm:pb-14 sm:pt-16 md:px-[84px] md:pt-20 sm:min-h-[540px] lg:min-h-[560px]">
+                <div className="w-full min-w-0 max-w-[580px] text-white">
                   <Eyebrow tone="light">{slide.eyebrow}</Eyebrow>
                   {index === 0 ? (
-                    <h1 className="mt-2.5 text-balance sm:mt-5">
+                    <h1 className="mt-2 text-balance sm:mt-5">
                       <SlideHeading slide={slide} />
                     </h1>
                   ) : (
-                    <h2 className="mt-2.5 text-balance sm:mt-5">
+                    <h2 className="mt-2 text-balance sm:mt-5">
                       <SlideHeading slide={slide} />
                     </h2>
                   )}
-                  <p className="mt-2.5 max-w-[480px] text-xs leading-relaxed text-white/90 sm:mt-4 sm:text-[13px]">
+                  <p className="mt-2 w-full text-xs leading-relaxed text-white/90 sm:mt-4 sm:text-[13px]">
                     {slide.description}
                   </p>
 
-                  <dl className="mt-3.5 grid grid-cols-2 gap-2 sm:mt-6 sm:flex sm:flex-wrap sm:gap-0">
+                  {/* Stat Strip */}
+                  <dl className="mt-3.5 grid w-full grid-cols-2 gap-2 sm:mt-6 sm:flex sm:flex-wrap sm:gap-0">
                     {slide.stats.map((stat, i) => (
                       <div
                         key={stat.title}
                         className={cn(
-                          'rounded-lg border border-white/10 bg-white/10 p-2.5 backdrop-blur-xs sm:rounded-none sm:border-0 sm:bg-transparent sm:p-0',
+                          'rounded-lg border border-white/15 bg-white/10 p-2.5 backdrop-blur-md sm:rounded-none sm:border-0 sm:bg-transparent sm:p-0',
                           i === 0 ? 'sm:pr-5' : 'sm:border-l sm:border-white/40 sm:px-4 md:px-4',
                         )}
                       >
-                        <dt className="text-xs font-semibold sm:text-sm">{stat.title}</dt>
-                        <dd className="mt-0.5 text-[9.5px] leading-snug text-white/85 sm:text-[10px]">
-                          {stat.text.map((line) => (
-                            <span key={line} className="block">
-                              {line}
-                            </span>
-                          ))}
+                        <dt className="text-xs font-semibold text-white sm:text-sm">{stat.title}</dt>
+                        <dd className="mt-0.5 text-[9.5px] leading-snug text-white/80 sm:text-[10px]">
+                          <span className="sm:hidden">{stat.text.join(' ')}</span>
+                          <span className="hidden sm:block">
+                            {stat.text.map((line) => (
+                              <span key={line} className="block">
+                                {line}
+                              </span>
+                            ))}
+                          </span>
                         </dd>
                       </div>
                     ))}
@@ -224,7 +228,7 @@ export function Hero() {
 
                   <a
                     href={slide.cta.href}
-                    className="mt-4.5 inline-flex w-full sm:w-auto items-center justify-center gap-2.5 rounded-full bg-white px-5 py-2.5 text-xs font-semibold text-ink shadow-md transition-all hover:bg-white/90 active:scale-95 sm:mt-7 sm:rounded-sm sm:text-[11px]"
+                    className="mt-4 inline-flex items-center gap-2.5 rounded-full bg-white px-5 py-2.5 text-xs font-semibold text-ink shadow-md transition-all hover:bg-white/90 active:scale-95 sm:mt-7 sm:rounded-sm sm:text-[11px]"
                   >
                     <span>{slide.cta.label}</span>
                     <ArrowRight className="h-4 w-4 shrink-0" aria-hidden="true" />
@@ -232,20 +236,18 @@ export function Hero() {
                 </div>
 
                 <div
-                  className="mt-6 pr-0 sm:mt-10 md:mt-12 md:pr-28"
+                  className="mt-4 w-full min-w-0 max-w-full sm:mt-10 md:mt-12 md:pr-28"
                   onTouchStart={(e) => e.stopPropagation()}
                   onTouchMove={(e) => e.stopPropagation()}
                   onTouchEnd={(e) => e.stopPropagation()}
                 >
-                  <div className="mb-2 flex items-center justify-between sm:hidden">
+                  <div className="mb-1 flex items-center justify-between sm:hidden">
                     <p className="text-[9px] font-semibold uppercase tracking-[0.2em] text-white/70">
                       Brands Represented
                     </p>
-                    <span className="text-[8.5px] text-white/50">
-                      Swipe to explore &rarr;
-                    </span>
+                    <span className="text-[8px] text-white/50">Scroll &rarr;</span>
                   </div>
-                  <div className="rounded-xl border border-white/10 bg-black/30 p-2.5 backdrop-blur-xs [mask-image:linear-gradient(to_right,black_calc(100%-24px),transparent)] sm:rounded-none sm:border-0 sm:bg-transparent sm:p-0 sm:[mask-image:none]">
+                  <div className="w-full min-w-0 max-w-full overflow-x-auto scrollbar-none py-1">
                     {slide.brands}
                   </div>
                 </div>
@@ -280,7 +282,16 @@ export function Hero() {
       </div>
 
       {/* Mobile Slider Controls */}
-      <div className="absolute inset-x-0 bottom-4 z-20 flex items-center justify-between px-4 sm:px-8 md:hidden">
+      <div className="absolute inset-x-0 bottom-3 z-20 flex items-center justify-center gap-3 md:hidden">
+        <button
+          type="button"
+          onClick={() => go(-1)}
+          aria-label="Previous slide"
+          className="flex h-7 w-7 items-center justify-center rounded-full border border-white/30 bg-black/40 text-white backdrop-blur-md transition-colors hover:bg-white/20 active:scale-90"
+        >
+          <ArrowLeft className="h-3 w-3" aria-hidden="true" />
+        </button>
+
         <div className="flex items-center gap-1.5" role="tablist" aria-label="Hero Slides">
           {slides.map((slide, i) => (
             <button
@@ -290,7 +301,7 @@ export function Hero() {
               onClick={() => setActive(i)}
               aria-label={`Go to slide ${i + 1}`}
               aria-selected={i === active}
-              className="group px-1 py-2 focus:outline-none"
+              className="group py-2 focus:outline-none"
             >
               <span
                 className={cn(
@@ -302,24 +313,14 @@ export function Hero() {
           ))}
         </div>
 
-        <div className="flex items-center gap-2">
-          <button
-            type="button"
-            onClick={() => go(-1)}
-            aria-label="Previous slide"
-            className="flex h-8 w-8 items-center justify-center rounded-full border border-white/35 bg-navy-deep/60 text-white backdrop-blur-md transition-colors hover:bg-white/20 active:scale-90"
-          >
-            <ArrowLeft className="h-3.5 w-3.5" aria-hidden="true" />
-          </button>
-          <button
-            type="button"
-            onClick={() => go(1)}
-            aria-label="Next slide"
-            className="flex h-8 w-8 items-center justify-center rounded-full border border-white/35 bg-navy-deep/60 text-white backdrop-blur-md transition-colors hover:bg-white/20 active:scale-90"
-          >
-            <ArrowRight className="h-3.5 w-3.5" aria-hidden="true" />
-          </button>
-        </div>
+        <button
+          type="button"
+          onClick={() => go(1)}
+          aria-label="Next slide"
+          className="flex h-7 w-7 items-center justify-center rounded-full border border-white/30 bg-black/40 text-white backdrop-blur-md transition-colors hover:bg-white/20 active:scale-90"
+        >
+          <ArrowRight className="h-3 w-3" aria-hidden="true" />
+        </button>
       </div>
     </section>
   )
@@ -328,10 +329,10 @@ export function Hero() {
 function SlideHeading({ slide }: { slide: Slide }) {
   return (
     <>
-      <span className="block text-2xl font-semibold leading-tight sm:text-3xl md:text-[40px]">
+      <span className="block text-2xl font-bold leading-tight tracking-tight sm:text-3xl md:text-[40px]">
         {slide.title}
       </span>
-      <span className="block text-lg font-light leading-snug text-white/95 sm:text-2xl sm:leading-tight md:text-[38px]">
+      <span className="block text-base font-light leading-snug text-white/90 sm:text-2xl sm:leading-tight md:text-[38px]">
         {slide.subtitle.map((line, idx) => (
           <span key={line} className="inline sm:block">
             {line}

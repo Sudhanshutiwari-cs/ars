@@ -10,28 +10,10 @@ import {
   Check,
   Clock,
   Copy,
-  MessageCircle,
   Quote,
-  Share2,
   Tag,
 } from 'lucide-react'
 import { BlogPost, blogPosts } from '@/lib/blog-data'
-
-function LinkedInIcon({ className }: { className?: string }) {
-  return (
-    <svg className={className} viewBox="0 0 24 24" fill="currentColor">
-      <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451c.979 0 1.778-.773 1.778-1.729V1.73C24 .774 23.205 0 22.225 0z" />
-    </svg>
-  )
-}
-
-function XTwitterIcon({ className }: { className?: string }) {
-  return (
-    <svg className={className} viewBox="0 0 24 24" fill="currentColor">
-      <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
-    </svg>
-  )
-}
 
 export function BlogPostContent({ post }: { post: BlogPost }) {
   const [copied, setCopied] = useState(false)
@@ -44,8 +26,7 @@ export function BlogPostContent({ post }: { post: BlogPost }) {
     }
   }
 
-  const shareText = encodeURIComponent(`${post.title} via ARS Imperial Landmark`)
-  const currentUrl = typeof window !== 'undefined' ? encodeURIComponent(window.location.href) : ''
+
 
   // Related posts (excluding current post)
   const relatedPosts = blogPosts
@@ -130,57 +111,25 @@ export function BlogPostContent({ post }: { post: BlogPost }) {
               </div>
             </div>
 
-            {/* Social Share */}
-            <div className="flex items-center gap-2">
-              <span className="text-xs font-semibold uppercase tracking-wider text-ink/50 mr-1 hidden sm:inline">
-                Share:
-              </span>
-              <a
-                href={`https://api.whatsapp.com/send?text=${shareText}%20${currentUrl}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex h-9 w-9 items-center justify-center rounded-full bg-emerald-50 text-emerald-600 transition-colors hover:bg-emerald-600 hover:text-white"
-                aria-label="Share on WhatsApp"
-              >
-                <MessageCircle className="h-4 w-4" />
-              </a>
-              <a
-                href={`https://www.linkedin.com/sharing/share-offsite/?url=${currentUrl}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex h-9 w-9 items-center justify-center rounded-full bg-blue-50 text-blue-600 transition-colors hover:bg-blue-600 hover:text-white"
-                aria-label="Share on LinkedIn"
-              >
-                <LinkedInIcon className="h-4 w-4" />
-              </a>
-              <a
-                href={`https://twitter.com/intent/tweet?text=${shareText}&url=${currentUrl}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex h-9 w-9 items-center justify-center rounded-full bg-neutral-100 text-neutral-700 transition-colors hover:bg-neutral-800 hover:text-white"
-                aria-label="Share on Twitter"
-              >
-                <XTwitterIcon className="h-4 w-4" />
-              </a>
-              <button
-                type="button"
-                onClick={handleCopyLink}
-                className="flex h-9 items-center gap-1.5 rounded-full border border-neutral-200 bg-white px-3 text-xs font-medium text-ink/75 hover:bg-neutral-50 transition-colors"
-                aria-label="Copy link"
-              >
-                {copied ? (
-                  <>
-                    <Check className="h-3.5 w-3.5 text-emerald-600" />
-                    <span className="text-emerald-700">Copied!</span>
-                  </>
-                ) : (
-                  <>
-                    <Copy className="h-3.5 w-3.5" />
-                    <span>Copy</span>
-                  </>
-                )}
-              </button>
-            </div>
+            {/* Copy Article Link */}
+            <button
+              type="button"
+              onClick={handleCopyLink}
+              className="inline-flex items-center gap-2 rounded-full border border-neutral-200 bg-white px-4 py-2 text-xs font-semibold text-[#0c2340] shadow-2xs transition-all hover:bg-neutral-50 active:scale-95"
+              aria-label="Copy article link"
+            >
+              {copied ? (
+                <>
+                  <Check className="h-3.5 w-3.5 text-emerald-600" />
+                  <span className="font-semibold text-emerald-700">Link Copied!</span>
+                </>
+              ) : (
+                <>
+                  <Copy className="h-3.5 w-3.5 text-ink/70" />
+                  <span>Copy Article Link</span>
+                </>
+              )}
+            </button>
           </div>
         </header>
 

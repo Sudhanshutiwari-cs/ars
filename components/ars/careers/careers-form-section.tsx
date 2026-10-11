@@ -99,7 +99,7 @@ export function CareersFormSection({
     }
   }
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setIsSubmitting(true)
 
@@ -107,10 +107,23 @@ export function CareersFormSection({
     const randomCode = `ARS-APP-${Math.floor(10000 + Math.random() * 90000)}`
     setApplicationRef(randomCode)
 
-    setTimeout(() => {
+    try {
+      await fetch('/api/careers', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          ...formData,
+          applicationRef: randomCode,
+          resumeFileName: fileName,
+          submittedAt: new Date().toISOString(),
+        }),
+      })
+    } catch (err) {
+      console.error('Error submitting application:', err)
+    } finally {
       setIsSubmitting(false)
       setIsSubmitted(true)
-    }, 1000)
+    }
   }
 
   const handleReset = () => {

@@ -1,5 +1,7 @@
 'use server'
 
+import { saveToGoogleSheets } from '@/lib/google-sheets'
+
 export type InquiryState = {
   status: 'idle' | 'success' | 'error'
   message?: string
@@ -31,6 +33,19 @@ export async function submitInquiry(_prev: InquiryState, formData: FormData): Pr
   if (Object.keys(errors).length > 0) {
     return { status: 'error', message: 'Please fix the highlighted fields.', errors }
   }
+
+  // Save to Google Sheets
+  await saveToGoogleSheets('contact', {
+    fullName: value('fullName'),
+    company: value('company'),
+    email: value('email'),
+    phone: value('phone'),
+    designation: value('designation'),
+    inquiryType: value('inquiryType'),
+    message: value('message'),
+    attachmentName: file instanceof File && file.name ? file.name : '',
+    submittedAt: new Date().toISOString(),
+  })
 
   return {
     status: 'success',
