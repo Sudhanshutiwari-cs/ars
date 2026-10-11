@@ -36,7 +36,7 @@ const slides: Slide[] = [
     ],
     cta: { label: 'Explore ARS Global Automotive', href: '#business' },
     image: {
-      src: '/images/hero.png',
+      src: 'https://res.cloudinary.com/df01whs60/image/upload/v1791687797/ARS_Global_Automotive_at_Sunset_hychnu.png',
       alt: 'ARS Global Automotive dealership with SUVs parked in front at sunset',
     },
     brands: <BrandStrip tone="light" />,
@@ -56,7 +56,7 @@ const slides: Slide[] = [
     ],
     cta: { label: 'Explore ARS MotoCorp', href: '#business' },
     image: {
-      src: '/images/hero-motocorp.png',
+      src: 'https://res.cloudinary.com/df01whs60/image/upload/v1791687101/Analysis_output_1_s0ropm.png',
       alt: 'ARS MotoCorp showroom at dusk with motorcycles and scooters lined up outside',
     },
     brands: <MotoBrandStrip />,
@@ -76,7 +76,7 @@ const slides: Slide[] = [
     ],
     cta: { label: 'Explore ARS Commercial Mobility', href: '/commercial-mobility' },
     image: {
-      src: '/images/hero-commercial.png',
+      src: 'https://res.cloudinary.com/df01whs60/image/upload/v1791688094/ARS_Commercial_Mobility_at_Sunset_qemvaz.png',
       alt: 'ARS Commercial Mobility showroom at sunset with trucks and a bus parked in front',
     },
     brands: <CommercialBrandStrip />,

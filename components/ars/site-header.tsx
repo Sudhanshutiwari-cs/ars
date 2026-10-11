@@ -20,7 +20,7 @@ export function Logo({ size = 'md' }: { size?: 'md' | 'lg' }) {
   return (
     <Link href="/" className="flex items-center gap-4" aria-label="ARS Imperial Landmark home">
       <Image
-        src="/images/wolf-logo.png"
+        src="https://res.cloudinary.com/df01whs60/image/upload/v1791686790/Intense_Monochrome_Wolf_Emblem_lxin4e.png"
         alt=""
         width={80}
         height={80}
