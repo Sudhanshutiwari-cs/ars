@@ -2,6 +2,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { ArrowRight } from 'lucide-react'
 import { ContactInfoRow } from './contact-info-row'
+import { SocialLinks } from '@/components/ars/social-links'
 
 export function ContactHero() {
   return (
@@ -55,13 +56,21 @@ export function ContactHero() {
 
         <ContactInfoRow variant="stacked" className="mt-8 max-w-[520px]" />
 
-        <a
-          href="#contact"
-          className="mt-8 inline-flex items-center gap-3 rounded-full bg-[#0b2a5b] px-6 py-3 text-[13px] font-semibold text-white shadow-md transition-colors hover:bg-[#0e3672]"
-        >
-          Send Us a Message
-          <ArrowRight className="h-4 w-4" aria-hidden="true" />
-        </a>
+        <div className="mt-8 flex flex-wrap items-center gap-4">
+          <a
+            href="#contact"
+            className="inline-flex items-center gap-3 rounded-full bg-[#0b2a5b] px-6 py-3 text-[13px] font-semibold text-white shadow-md transition-colors hover:bg-[#0e3672]"
+          >
+            Send Us a Message
+            <ArrowRight className="h-4 w-4" aria-hidden="true" />
+          </a>
+          <div className="flex items-center gap-2.5">
+            <span className="text-[11px] font-semibold uppercase tracking-wider text-[#0b2a5b]/70">
+              Follow Us:
+            </span>
+            <SocialLinks variant="light" />
+          </div>
+        </div>
       </div>
 
       <div className="relative aspect-[16/10] w-full lg:hidden">

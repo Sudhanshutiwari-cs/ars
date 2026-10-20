@@ -1,5 +1,6 @@
 import { ContactInfoRow } from './contact-info-row'
 import { InquiryForm } from './inquiry-form'
+import { SocialLinks } from '@/components/ars/social-links'
 
 export function ContactFormSection() {
   return (
@@ -25,6 +26,13 @@ export function ContactFormSection() {
           </p>
 
           <ContactInfoRow variant="inline" className="mt-6" />
+
+          <div className="mt-5 flex flex-wrap items-center gap-3">
+            <span className="text-[11px] font-semibold uppercase tracking-wider text-[#0b2a5b]">
+              Connect With Us:
+            </span>
+            <SocialLinks variant="light" showLabels />
+          </div>
 
           <div className="mt-6 overflow-hidden rounded-md border border-[#dbe3ee]">
             <iframe

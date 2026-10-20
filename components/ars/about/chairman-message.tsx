@@ -3,14 +3,14 @@ import Image from 'next/image'
 export function ChairmanMessage() {
   return (
     <section id="leadership" className="bg-[#f6f8fc] py-14 font-alt lg:py-[52px]">
-      <div className="mx-auto grid max-w-[1120px] items-center gap-10 px-6 md:px-10 lg:grid-cols-[492px_1fr] lg:gap-[34px]">
-        <div className="relative aspect-[492/362] overflow-hidden rounded-xl shadow-sm">
+      <div className="mx-auto grid max-w-[1120px] items-center gap-10 px-6 md:px-10 lg:grid-cols-[460px_1fr] lg:gap-10">
+        <div className="relative mx-auto w-full max-w-[460px] aspect-[1080/1457] overflow-hidden rounded-2xl shadow-md">
           <Image
-            src="https://res.cloudinary.com/df01whs60/image/upload/v1791686016/ars_founder_nbmcyv.png"
-            alt="Sahil Samrat Singh, Chairman and Managing Director of ARS Imperial Landmark, seated at his office desk"
+            src="https://res.cloudinary.com/df01whs60/image/upload/v1792486646/file_00000000f50881f5aaea1cfb28840262_qjsfhu.png"
+            alt="Sahil Singh, Chairman and Managing Director of ARS Imperial Landmark, seated at his office desk"
             fill
-            sizes="(min-width: 1024px) 492px, 100vw"
-            className="object-cover"
+            sizes="(min-width: 1024px) 460px, (min-width: 640px) 440px, 100vw"
+            className="object-cover object-top"
           />
         </div>
 

@@ -106,6 +106,10 @@ const organizationSchema = {
         jobTitle: 'Chairman & Managing Director',
       },
       telephone: '+91-6202122112',
+      sameAs: [
+        'https://www.facebook.com/share/1Erpi2HVF1',
+        'https://www.instagram.com/arsimperiallandmarkgroup?mdxt=MWx6OXZxejB5YW81Ng==',
+      ],
       address: {
         '@type': 'PostalAddress',
         streetAddress: 'Pillar Number 99, Dadri Main Rd, Bhangel, Goyal Colony, Salarpur',
@@ -120,6 +124,10 @@ const organizationSchema = {
       '@id': 'https://arsimperiallandmark.com/#dealership',
       name: 'ARS Imperial Landmark',
       url: 'https://arsimperiallandmark.com/',
+      sameAs: [
+        'https://www.facebook.com/share/1Erpi2HVF1',
+        'https://www.instagram.com/arsimperiallandmarkgroup?mdxt=MWx6OXZxejB5YW81Ng==',
+      ],
       telephone: '+91-6202122112',
       priceRange: '₹₹₹',
       image: 'https://res.cloudinary.com/df01whs60/image/upload/v1791687797/ARS_Global_Automotive_at_Sunset_hychnu.png',

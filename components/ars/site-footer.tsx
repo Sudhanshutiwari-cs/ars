@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { ChevronRight, Clock, MapPin, MessageCircle, Phone, ShipWheel as Steering, Store, UserRoundCog } from 'lucide-react'
+import { SocialLinks } from './social-links'
 
 const ctas = [
   { icon: UserRoundCog, title: 'Enquire Now', text: 'Get quick assistance from our team.', href: '/contact#contact' },
@@ -128,6 +129,12 @@ export function SiteFooter() {
                 </div>
               </div>
             </div>
+            <div className="mt-4 flex items-center justify-between border-t border-white/15 pt-3">
+              <span className="text-[10px] font-medium uppercase tracking-[0.16em] text-white/70">
+                Follow Us
+              </span>
+              <SocialLinks variant="footer" />
+            </div>
           </div>
         </div>
 
@@ -154,6 +161,16 @@ export function SiteFooter() {
             </div>
           ))}
         </nav>
+      </div>
+
+      <div className="border-t border-white/10 bg-[#051126] py-4">
+        <div className="mx-auto flex max-w-[1240px] flex-col items-center justify-between gap-3 px-6 text-[11px] text-white/60 sm:flex-row md:px-10">
+          <p>© {new Date().getFullYear()} ARS Imperial Landmark. All rights reserved.</p>
+          <div className="flex items-center gap-3">
+            <span className="text-[10px] uppercase tracking-wider text-white/60">Connect With Us:</span>
+            <SocialLinks variant="footer" />
+          </div>
+        </div>
       </div>
     </footer>
   )

@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import { ArrowRight, MessageSquareText } from 'lucide-react'
+import { SocialLinks } from './social-links'
 
 export function ContactBanner() {
   return (
@@ -28,15 +29,21 @@ export function ContactBanner() {
           <p className="mt-3 max-w-[380px] text-[13px] leading-relaxed text-white/85">
             {'We’re here to help. Reach out to our team for inquiries, partnerships, career opportunities or any assistance you need.'}
           </p>
-          <a
-            href="mailto:info@arsimperial.com"
-            className="mt-6 inline-flex items-center gap-4 rounded-full border border-brand-green/80 py-3 pl-5 pr-7 text-[13px] font-medium transition-colors hover:bg-white/5"
-          >
-            <MessageSquareText className="h-4 w-4" strokeWidth={1.5} aria-hidden="true" />
-            <span aria-hidden="true" className="h-6 w-px bg-white/30" />
-            Contact Us
-            <ArrowRight className="ml-4 h-4 w-4" strokeWidth={1.5} aria-hidden="true" />
-          </a>
+          <div className="mt-6 flex flex-wrap items-center gap-4">
+            <a
+              href="mailto:info@arsimperial.com"
+              className="inline-flex items-center gap-4 rounded-full border border-brand-green/80 py-3 pl-5 pr-7 text-[13px] font-medium transition-colors hover:bg-white/5"
+            >
+              <MessageSquareText className="h-4 w-4" strokeWidth={1.5} aria-hidden="true" />
+              <span aria-hidden="true" className="h-6 w-px bg-white/30" />
+              Contact Us
+              <ArrowRight className="ml-4 h-4 w-4" strokeWidth={1.5} aria-hidden="true" />
+            </a>
+            <div className="flex items-center gap-2.5">
+              <span className="text-[11px] uppercase tracking-wider text-white/75">Follow Us:</span>
+              <SocialLinks variant="footer" />
+            </div>
+          </div>
         </div>
       </div>
     </section>
