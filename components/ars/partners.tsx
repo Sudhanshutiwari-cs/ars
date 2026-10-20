@@ -1,7 +1,6 @@
 'use client'
 
 import { useState } from 'react'
-import { Leaf } from 'lucide-react'
 import { cn } from '@/lib/utils'
 import { Eyebrow } from './eyebrow'
 
@@ -18,10 +17,11 @@ const partners: Partner[] = [
     name: 'Mahindra',
     categories: ['cars'],
     render: () => (
-      <div className="flex flex-col items-center gap-1">
-        <Icon src="/logos/mahindra.svg" className="h-6 w-9" />
-        <span className="text-[11px] text-neutral-700">mahindra</span>
-      </div>
+      <img
+        src="https://res.cloudinary.com/df01whs60/image/upload/v1792528106/WhatsApp_Image_2026-10-12_at_2.19.15_PM_njx8r0.jpg"
+        alt="Mahindra"
+        className="h-14 w-auto max-w-[100px] rounded object-contain shadow-xs"
+      />
     ),
   },
   {
@@ -80,33 +80,38 @@ const partners: Partner[] = [
     name: 'AltiGreen',
     categories: ['commercial'],
     render: () => (
-      <div className="flex items-center gap-1.5">
-        <span className="flex h-6 w-6 items-center justify-center rounded-full bg-[#43a047]">
-          <Leaf className="h-3.5 w-3.5 text-white" aria-hidden="true" />
-        </span>
-        <span className="text-[15px] font-medium text-neutral-800">AltiGreen</span>
-      </div>
+      <img
+        src="https://res.cloudinary.com/df01whs60/image/upload/v1792528091/WhatsApp_Image_2026-10-12_at_2.18.51_PM_nsejit.jpg"
+        alt="Altigreen"
+        className="h-10 w-auto max-w-[125px] object-contain mix-blend-multiply"
+      />
     ),
   },
   {
     name: 'Ashok Leyland',
     categories: ['commercial'],
     render: () => (
-      <div className="flex flex-col items-center gap-1">
-        <span className="flex h-6 w-6 items-center justify-center rounded-full border-[3px] border-[#1d64b5]">
-          <span className="h-2 w-2 rounded-full bg-[#1d64b5]" />
-        </span>
-        <span className="text-[10px] font-bold tracking-wide text-[#1d64b5]">ASHOK LEYLAND</span>
-      </div>
+      <img
+        src="https://res.cloudinary.com/df01whs60/image/upload/v1792528230/Ashok_Leyland-Logo.wine_dcoded.png"
+        alt="Ashok Leyland"
+        className="h-11 w-auto max-w-[130px] object-contain"
+      />
     ),
   },
   {
     name: 'Mahindra Commercial Vehicles',
     categories: ['commercial'],
     render: () => (
-      <div className="flex flex-col items-center leading-none">
-        <span className="text-[17px] font-black text-[#e31b23]">Mahindra</span>
-        <span className="mt-1 text-[7.5px] font-semibold tracking-wide text-neutral-800">COMMERCIAL VEHICLES</span>
+      <div className="flex items-center justify-center gap-2">
+        <img
+          src="https://res.cloudinary.com/df01whs60/image/upload/v1792528106/WhatsApp_Image_2026-10-12_at_2.19.15_PM_njx8r0.jpg"
+          alt="Mahindra Commercial Vehicles"
+          className="h-10 w-10 rounded object-contain shadow-xs"
+        />
+        <div className="flex flex-col text-left leading-tight">
+          <span className="text-[12px] font-bold text-neutral-900">Mahindra</span>
+          <span className="text-[7px] font-semibold tracking-wider text-neutral-500">COMMERCIAL</span>
+        </div>
       </div>
     ),
   },

@@ -50,28 +50,40 @@ export function BrandStrip({
                 horizontal ? 'flex-row gap-1.5' : 'flex-col gap-0.5',
               )}
             >
-              {brand.icon && (
+              {brand.name === 'Mahindra' ? (
                 <img
-                  src={brand.icon || '/placeholder.svg'}
-                  alt={brand.label ? '' : brand.name}
+                  src="https://res.cloudinary.com/df01whs60/image/upload/v1792528106/WhatsApp_Image_2026-10-12_at_2.19.15_PM_njx8r0.jpg"
+                  alt="Mahindra"
                   className={cn(
-                    'object-contain',
-                    brand.iconClass ?? 'h-5 w-7',
-                    isLight ? 'brightness-0 invert' : 'brightness-0 opacity-85',
+                    'h-6 w-auto object-contain',
+                    isLight ? 'mix-blend-screen' : 'rounded shadow-2xs',
                   )}
                 />
-              )}
-              {brand.label && (
-                <span
-                  className={cn(
-                    'whitespace-nowrap font-semibold leading-none tracking-wide',
-                    horizontal ? 'text-[9px]' : 'text-[8px]',
-                    brand.name === 'Mahindra' && 'font-medium tracking-normal normal-case',
-                    isLight ? 'text-white' : 'text-ink',
+              ) : (
+                <>
+                  {brand.icon && (
+                    <img
+                      src={brand.icon || '/placeholder.svg'}
+                      alt={brand.label ? '' : brand.name}
+                      className={cn(
+                        'object-contain',
+                        brand.iconClass ?? 'h-5 w-7',
+                        isLight ? 'brightness-0 invert' : 'brightness-0 opacity-85',
+                      )}
+                    />
                   )}
-                >
-                  {brand.label}
-                </span>
+                  {brand.label && (
+                    <span
+                      className={cn(
+                        'whitespace-nowrap font-semibold leading-none tracking-wide',
+                        horizontal ? 'text-[9px]' : 'text-[8px]',
+                        isLight ? 'text-white' : 'text-ink',
+                      )}
+                    >
+                      {brand.label}
+                    </span>
+                  )}
+                </>
               )}
             </div>
           </li>

@@ -2,9 +2,9 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 const businesses = [
-  { id: 'global-automotive', title: 'ARS Global Automotive', image: 'https://res.cloudinary.com/df01whs60/image/upload/v1791688875/Luxury_Showroom_at_Sunset_ahzego.png', alt: 'ARS Global Automotive car dealership', href: '/global-automotive' },
-  { id: 'motocorp', title: 'ARS MotoCorp', image: 'https://res.cloudinary.com/df01whs60/image/upload/v1791689039/High-End_Motorcycle_Showroom_Display_kcppgn.png', alt: 'ARS MotoCorp motorcycle showroom', href: '/ars-motocorp' },
-  { id: 'commercial-mobility', title: 'ARS Commercial Mobility', image: 'https://res.cloudinary.com/df01whs60/image/upload/v1791689220/Sunset_ARS_Commercial_Mobility_Showroom_i1zy1v.png', alt: 'ARS Commercial Mobility trucks and bus', href: '/commercial-mobility' },
+  { id: 'global-automotive', title: 'ARS Global Automotive', image: 'https://res.cloudinary.com/df01whs60/image/upload/v1791715211/Out_Door_Mahindra_uxun94.webp', alt: 'ARS Global Automotive car dealership', href: '/global-automotive' },
+  { id: 'motocorp', title: 'ARS MotoCorp', image: 'https://res.cloudinary.com/df01whs60/image/upload/v1791715211/hero_outside_ohm4z0.jpg', alt: 'ARS MotoCorp motorcycle showroom', href: '/ars-motocorp' },
+  { id: 'commercial-mobility', title: 'ARS Commercial Mobility', image: 'https://res.cloudinary.com/df01whs60/image/upload/v1791715213/tata_outside_oyb4b4.jpg', alt: 'ARS Commercial Mobility trucks and bus', href: '/commercial-mobility' },
 ]
 
 export function OurBusiness() {

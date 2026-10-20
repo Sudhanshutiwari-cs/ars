@@ -6,7 +6,6 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { ArrowRight, Bike, Car, ChevronDown, Menu, Phone, Truck, X } from 'lucide-react'
 import { cn } from '@/lib/utils'
-import { SocialLinks } from './social-links'
 
 const navLinks = [
   { label: 'Home', href: '/', route: '/' },
@@ -215,22 +214,19 @@ export function SiteHeader() {
           </ul>
         </nav>
 
-        <div className="hidden items-center gap-3.5 md:flex">
-          <SocialLinks variant="header" />
-          <a
-            href="tel:6202122112"
-            className="flex items-center gap-4 rounded-full border border-white/40 py-2 pl-5 pr-2 text-white transition-colors hover:bg-white/5"
-          >
-            <Phone className="h-5 w-5" strokeWidth={1.5} aria-hidden="true" />
-            <span className="flex flex-col leading-tight">
-              <span className="text-[8px] uppercase tracking-[0.15em] text-white/80">Call us</span>
-              <span className="text-sm tracking-wider">6202122112</span>
-            </span>
-            <span className="ml-2 flex h-8 w-8 items-center justify-center rounded-full border border-white/40">
-              <ArrowRight className="h-4 w-4" strokeWidth={1.5} aria-hidden="true" />
-            </span>
-          </a>
-        </div>
+        <a
+          href="tel:6202122112"
+          className="hidden items-center gap-4 rounded-full border border-white/40 py-2 pl-5 pr-2 text-white transition-colors hover:bg-white/5 md:flex"
+        >
+          <Phone className="h-5 w-5" strokeWidth={1.5} aria-hidden="true" />
+          <span className="flex flex-col leading-tight">
+            <span className="text-[8px] uppercase tracking-[0.15em] text-white/80">Call us</span>
+            <span className="text-sm tracking-wider">6202122112</span>
+          </span>
+          <span className="ml-2 flex h-8 w-8 items-center justify-center rounded-full border border-white/40">
+            <ArrowRight className="h-4 w-4" strokeWidth={1.5} aria-hidden="true" />
+          </span>
+        </a>
 
         <button
           type="button"
@@ -310,12 +306,9 @@ export function SiteHeader() {
               )
             })}
           </ul>
-          <div className="mt-5 flex items-center justify-between border-t border-white/10 pt-4">
-            <a href="tel:6202122112" className="flex items-center gap-3 text-white">
-              <Phone className="h-5 w-5" aria-hidden="true" /> 6202122112
-            </a>
-            <SocialLinks variant="header" />
-          </div>
+          <a href="tel:6202122112" className="mt-4 flex items-center gap-3 text-white">
+            <Phone className="h-5 w-5" aria-hidden="true" /> 6202122112
+          </a>
         </nav>
       )}
     </header>

@@ -1,4 +1,3 @@
-import { Leaf } from 'lucide-react'
 import { cn } from '@/lib/utils'
 
 const whiteLogo = 'object-contain brightness-0 invert'
@@ -59,15 +58,19 @@ export function CommercialBrandStrip() {
       aria-label="Commercial vehicle brands we represent"
       className="flex w-full min-w-0 max-w-full items-center overflow-x-auto pb-1 text-white scrollbar-none sm:flex-wrap sm:gap-y-4"
     >
-      <li className="flex shrink-0 flex-col items-start pr-4 sm:pr-7">
-        <Leaf className="h-4 w-4 sm:h-5 sm:w-5" aria-hidden="true" />
-        <span className="mt-1 text-[9px] sm:text-[10px] font-semibold leading-none tracking-wide">
-          ALTI<span className="font-light">GREEN</span>
-        </span>
+      <li className="flex shrink-0 items-center pr-4 sm:pr-7">
+        <img
+          src="https://res.cloudinary.com/df01whs60/image/upload/v1792528091/WhatsApp_Image_2026-10-12_at_2.18.51_PM_nsejit.jpg"
+          alt="Altigreen"
+          className="h-6 w-auto rounded bg-white px-2 py-0.5 object-contain sm:h-7"
+        />
       </li>
-      <li className="flex shrink-0 flex-col items-start border-l border-white/30 px-4 sm:px-7">
-        <span className="text-[13px] sm:text-[15px] font-bold leading-none tracking-wide">Mahindra</span>
-        <span className="mt-0.5 text-[6px] tracking-[0.2em]">COMMERCIAL VEHICLES</span>
+      <li className="flex shrink-0 items-center border-l border-white/30 px-4 sm:px-7">
+        <img
+          src="https://res.cloudinary.com/df01whs60/image/upload/v1792528106/WhatsApp_Image_2026-10-12_at_2.19.15_PM_njx8r0.jpg"
+          alt="Mahindra Commercial Vehicles"
+          className="h-8 w-auto object-contain mix-blend-screen sm:h-9"
+        />
       </li>
       <li className="flex shrink-0 flex-col items-start border-l border-white/30 px-4 sm:px-7">
         <span className="flex items-center gap-1.5">
@@ -76,11 +79,12 @@ export function CommercialBrandStrip() {
         </span>
         <span className="mt-0.5 text-[6px] tracking-[0.2em]">COMMERCIAL VEHICLES</span>
       </li>
-      <li className="flex shrink-0 flex-col items-center border-x border-white/30 px-4 sm:px-7">
-        <span className="flex h-5 w-5 sm:h-6 sm:w-6 items-center justify-center rounded-full border border-white text-[8px] sm:text-[9px] font-bold">
-          AL
-        </span>
-        <span className="mt-0.5 text-[6.5px] sm:text-[7px] font-semibold tracking-[0.15em]">ASHOK LEYLAND</span>
+      <li className="flex shrink-0 items-center border-x border-white/30 px-4 sm:px-7">
+        <img
+          src="https://res.cloudinary.com/df01whs60/image/upload/v1792528230/Ashok_Leyland-Logo.wine_dcoded.png"
+          alt="Ashok Leyland"
+          className={cn(whiteLogo, 'h-6 w-auto sm:h-7')}
+        />
       </li>
     </ul>
   )
