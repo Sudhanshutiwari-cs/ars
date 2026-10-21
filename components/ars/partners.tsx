@@ -129,10 +129,11 @@ const partners: Partner[] = [
     name: 'TVS',
     categories: ['two'],
     render: () => (
-      <div className="flex items-center gap-1">
-        <span className="text-[20px] font-black italic tracking-wider text-[#1b3a8a]">TVS</span>
-        <span className="h-1.5 w-8 -skew-x-[30deg] rounded-sm bg-[#e31b23]" aria-hidden="true" />
-      </div>
+      <img
+        src="https://res.cloudinary.com/df01whs60/image/upload/v1792592984/TVS-Motor-Logo_m53odw.jpg"
+        alt="TVS"
+        className="h-12 w-auto max-w-[115px] object-contain mix-blend-multiply"
+      />
     ),
   },
   { name: 'Bajaj', categories: ['two'], render: () => <Icon src="/logos/bajaj-auto.svg" className="h-8 w-24" /> },

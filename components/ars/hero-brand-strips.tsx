@@ -16,8 +16,7 @@ export function MotoBrandStrip() {
         <span className="text-[7px] font-bold tracking-[0.2em]">BAJAJ</span>
       </li>
       <li className="shrink-0">
-        <span className="text-[15px] sm:text-[17px] font-black italic tracking-tight">TVS</span>
-        <span className="sr-only"> Motor</span>
+        <img src="/logos/tvs-motor.png" alt="TVS Motor" className={cn(whiteLogo, 'h-4 w-auto sm:h-5')} />
       </li>
       <li className="shrink-0">
         <img src="/logos/hero-motocorp.svg" alt="Hero" className={cn(whiteLogo, 'h-5 w-12 sm:h-6 sm:w-16')} />
